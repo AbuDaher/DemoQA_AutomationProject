@@ -1,5 +1,4 @@
 package pages;
-
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
@@ -13,12 +12,10 @@ public class BasePage {
     }
 
     protected void clickElement(WebElement element){
-
         element.click();
     }
 
     protected void inputText(WebElement element, String text){
-
         element.sendKeys(text);
 
     }
