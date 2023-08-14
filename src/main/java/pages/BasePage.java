@@ -12,12 +12,10 @@ public class BasePage {
     }
 
     protected void clickElement(WebElement element){
-
         element.click();
     }
 
     protected void inputText(WebElement element, String text){
-
         element.sendKeys(text);
 
     }
