@@ -30,7 +30,7 @@ public class BaseTest {
         String expectedMessage = "Andreea";
         String actualMessage = driver.findElement(By.cssSelector("#userName-value")).getText();
         Assert.assertEquals(actualMessage, expectedMessage, "Error: User name is not present");
-        Thread.sleep(2000);
+
         driver.close();
     }
 }
