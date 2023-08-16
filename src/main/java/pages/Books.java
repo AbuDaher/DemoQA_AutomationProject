@@ -71,5 +71,18 @@ public class Books extends BasePage{
             }
         }
     }
-
+    public void getAllBooksPublisher() {
+        ArrayList<String> bookTexts = new ArrayList<String>();
+        for (WebElement element : booksList) {
+            if (!element.getText().isBlank()) {
+                bookTexts.add(element.getText());
+            }
+        }
+        for (String bookText : bookTexts) {
+            String[] lines = bookText.split("\n");
+            if (lines.length > 0) {
+                System.out.println(lines[2]);
+            }
+        }
+    }
 }
