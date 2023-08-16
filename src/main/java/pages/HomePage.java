@@ -9,16 +9,17 @@ import org.openqa.selenium.support.FindBy;
 public class HomePage extends BasePage{
 
     @FindBy(xpath = "//div[@class='card-up'])[6]")
-    private WebElement BookStoreApplicationCard;
+    private WebElement bookStoreApplicationCard;
 
     public HomePage(WebDriver driver) {
         super(driver);
     }
 
     public void clickBookStoreApplicationCard(){
-        BookStoreApplicationCard = driver.findElement(By.xpath("(//div[@class='card-up'])[6]"));
-        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", BookStoreApplicationCard);
-        clickElement(BookStoreApplicationCard);
+        bookStoreApplicationCard = driver.findElement(By.xpath("(//div[@class='card-up'])[6]"));
+        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", bookStoreApplicationCard);
+        clickElement(bookStoreApplicationCard);
+
     }
 
 }
