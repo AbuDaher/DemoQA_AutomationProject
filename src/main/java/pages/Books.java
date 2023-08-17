@@ -1,8 +1,11 @@
 package pages;
 import constants.Constants;
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import utils.Utils;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -25,6 +28,18 @@ public class Books extends BasePage{
     public Books(WebDriver driver) {
         super(driver);
     }
+
+    @FindBy(xpath = "//a[contains(text(),'Git Pocket Guide')]")
+    WebElement firstBookChoice;
+
+    @FindBy(xpath = "//button[contains(text(),'Add To Your Collection')]")
+    WebElement addfirstBookChoice;
+
+    @FindBy(xpath = "//button[contains(text(),'Back To Book Store')]")
+    WebElement backToBookStoreButton;
+
+    @FindBy(xpath = "(//li[@id='item-3'])[5]")
+    WebElement profileTab;
 
     public void logInCredentials(){
         clickElement(logInButton);
@@ -101,5 +116,18 @@ public class Books extends BasePage{
                 }
             }
         }
+    }
+
+    public void createBooksCollection(){
+        clickElement(firstBookChoice);
+        clickElement(addfirstBookChoice);
+    }
+    public void setBackToBookStore(){
+        clickElement(backToBookStoreButton);
+    }
+    public void goToProfileBooks(){
+        profileTab = driver.findElement(By.xpath("(//li[@id='item-3'])[5]"));
+        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", profileTab);
+        clickElement(profileTab);
     }
 }
