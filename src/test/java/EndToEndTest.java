@@ -16,11 +16,11 @@ public class EndToEndTest extends BaseTest{
         Assert.assertEquals(message, Constants.LOG_IN_USER_CONFIRMATION_MESSAGE, ErrorMessages.SIGN_IN_USER_DYSPLAYED);
         Utils.waitInSeconds(1);
         this.books.createBooksCollection();
-//        Assert.assertEquals(Constants.BOOK_ADDED_TO_COLLECTION_CONFIRMATION_MESSAGE, Utils.getAlertText(driver),
-//                ErrorMessages.ADD_TO_COLLECTION_ERROR_MESSAGE);
+        Assert.assertEquals(Constants.BOOK_ADDED_TO_COLLECTION_CONFIRMATION_MESSAGE, Utils.getAlertText(driver),
+                ErrorMessages.ADD_TO_COLLECTION_ERROR_MESSAGE);
         Utils.waitInSeconds(2);
-//        Utils.acceptAlert(driver);
-//        this.books.setBackToBookStore();
+        Utils.acceptAlert(driver);
+        this.books.setBackToBookStore();
         Utils.waitInSeconds(1);
     }
 
