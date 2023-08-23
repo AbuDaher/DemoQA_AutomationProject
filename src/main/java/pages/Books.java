@@ -130,4 +130,51 @@ public class Books extends BasePage{
         ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", profileTab);
         clickElement(profileTab);
     }
+
+    public boolean verifyBookIsPresent( String bookTitle){
+        for(WebElement element: booksList){
+            if(element.getText().equalsIgnoreCase((bookTitle))){
+                return true;
+            }
+        }
+        return  false;
+    }
+    public void printAuthorAndPublisherIfBookIsPresent(String bookTitle) {
+        boolean bookFound = false;
+        for (WebElement element : booksList) {
+            if (verifyBookIsPresent(bookTitle) && element.getText().contains(bookTitle)) {
+                String[] arr = element.getText().split("\n");
+                System.out.println("Author: " + arr[1] + " Publisher: " + arr[2] );
+                bookFound = true;
+                break;
+            }
+        }
+        if(!bookFound)
+            System.out.println("Error, book not found !");
+    }
+
+    public void printBookTitleByIndex(int bookNumber){
+
+            if(bookNumber>0 && !booksList.get(bookNumber).getText().isBlank()){
+                System.out.println(booksList.get(bookNumber-1).getText());
+            }
+        }
+
+    public void getAuthorByIndex(int bookNumber){
+
+// !booksList.get(bookNumber).getText().isBlank()
+
+        if(bookNumber>0 && bookNumber < booksList.size()) {
+            if (!booksList.get(bookNumber-1).getText().isBlank()) {
+                String[] arr = booksList.get(bookNumber - 1).getText().split("\n");
+                System.out.println(arr[1]);
+            }else {
+                System.out.println("Book not found on this row.");
+            }
+        }
+        else{
+            System.out.println("Error, invalid book number. ");
+        }
+    }
+
 }
