@@ -18,4 +18,14 @@ public class Utils {
         WebElement element = driver.findElement(element1);
         ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
     }
+
+    public static void acceptAlert(WebDriver driver){
+
+        driver.switchTo().alert().accept();
+    }
+
+    public static String getAlertText(WebDriver driver){
+
+        return driver.switchTo().alert().getText();
+    }
 }

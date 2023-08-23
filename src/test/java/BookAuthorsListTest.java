@@ -1,14 +1,13 @@
 import org.testng.annotations.Test;
 import utils.Utils;
 
-public class BooksTest extends BaseTest{
+public class BookAuthorsListTest extends BaseTest{
 
     @Test
-    public void verifyBookListTest (){
+    public void getAllBooksAuthors (){
         this.homePage.clickBookStoreApplicationCard();
         Utils.waitInSeconds(1);
-        books.printAllBooks();
+        books.getAllBooksAuthors();
     }
-
 
 }
