@@ -6,10 +6,18 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
+import java.util.logging.Logger;
+
 public class HomePage extends BasePage{
 
     @FindBy(xpath = "//div[@class='card-up'])[6]")
     private WebElement bookStoreApplicationCard;
+
+    @FindBy(xpath = "//*[@id='app']/header/a/img")
+    private WebElement pageTitle;
+
+    @FindBy(xpath = "//div[@class='main-header']")
+    private WebElement subtitle;
 
     public HomePage(WebDriver driver) {
         super(driver);
@@ -21,5 +29,10 @@ public class HomePage extends BasePage{
         clickElement(bookStoreApplicationCard);
 
     }
-
+     public boolean isPageTitlePresent(){
+        return pageTitle.isDisplayed();
+     }
+     public boolean isSubtitlePresent(){
+        return subtitle.isDisplayed() && subtitle.getText().equalsIgnoreCase("Book Store");
+     }
 }
