@@ -24,7 +24,6 @@ public class BaseTest {
         this.books = new Books(driver);
         this.profileBooks = new ProfileBooks(driver);
     }
-
     @Test
     public void goToWebsite(){
 

@@ -1,7 +1,6 @@
 import org.testng.annotations.Test;
 import utils.Utils;
 
-
 public class BooksPublisherListTest extends BaseTest{
     @Test
     public void getAllBooksPublisher (){

@@ -1,12 +1,11 @@
-package pages;
+//HomePage
 
+package pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-
-import java.util.logging.Logger;
 
 public class HomePage extends BasePage{
 
@@ -18,6 +17,9 @@ public class HomePage extends BasePage{
 
     @FindBy(xpath = "//div[@class='main-header']")
     private WebElement subtitle;
+
+    @FindBy(css = "#searchBox")
+    WebElement type_to_search;
 
     public HomePage(WebDriver driver) {
         super(driver);
@@ -34,5 +36,9 @@ public class HomePage extends BasePage{
      }
      public boolean isSubtitlePresent(){
         return subtitle.isDisplayed() && subtitle.getText().equalsIgnoreCase("Book Store");
+     }
+
+     public boolean isSearchBarPresent(){
+        return type_to_search.isDisplayed();
      }
 }
