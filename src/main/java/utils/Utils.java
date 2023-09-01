@@ -1,5 +1,4 @@
 package utils;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
@@ -17,5 +16,15 @@ public class Utils {
     public static void scrollToElement(By element1, WebDriver driver){
         WebElement element = driver.findElement(element1);
         ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
+    }
+
+    public static void acceptAlert(WebDriver driver){
+
+        driver.switchTo().alert().accept();
+    }
+
+    public static String getAlertText(WebDriver driver){
+
+        return driver.switchTo().alert().getText();
     }
 }
