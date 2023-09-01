@@ -3,7 +3,7 @@ import utils.Utils;
 
 public class BooksPublisherListTest extends BaseTest{
     @Test
-    public void getAllBooksPublisher (){
+    public void getAllBooksPublishersList(){
         this.homePage.clickBookStoreApplicationCard();
         Utils.waitInSeconds(1);
         books.getAllBooksPublisher();

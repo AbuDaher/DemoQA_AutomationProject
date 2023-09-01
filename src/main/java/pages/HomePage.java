@@ -34,6 +34,7 @@ public class HomePage extends BasePage{
      public boolean isPageTitlePresent(){
         return pageTitle.isDisplayed();
      }
+
      public boolean isSubtitlePresent(){
         return subtitle.isDisplayed() && subtitle.getText().equalsIgnoreCase("Book Store");
      }

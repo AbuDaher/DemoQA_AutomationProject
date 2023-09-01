@@ -19,6 +19,7 @@ public class BasePage {
     protected void inputText(WebElement element, String text){
         element.sendKeys(text);
     }
+
     protected void scrollToElement(WebElement element){
         ((JavascriptExecutor)this.driver).executeScript("arguments[0].scrollintoView(true);", element);
     }

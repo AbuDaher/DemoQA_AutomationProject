@@ -12,7 +12,7 @@ public class BookInformationListTest extends BaseTest{
     }
 
     @Test
-    public void createHashMapTitleAndAuthorTest(){
+    public void createHashMapTitleAndAuthorsTest(){
         this.homePage.clickBookStoreApplicationCard();
         Utils.waitInSeconds(1);
         books.hashMapTitleKeyAuthorValue();
