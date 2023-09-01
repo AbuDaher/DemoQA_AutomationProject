@@ -1,5 +1,3 @@
-// Books
-
 package pages;
 import constants.Constants;
 import org.openqa.selenium.By;
@@ -8,7 +6,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import utils.Utils;
-
 import java.util.*;
 
 public class Books extends BasePage{

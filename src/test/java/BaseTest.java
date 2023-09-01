@@ -8,11 +8,10 @@ import pages.HomePage;
 import pages.ProfileBooks;
 
 public class BaseTest {
+
     protected WebDriver driver;
     protected HomePage homePage;
-
     protected Books books;
-
     protected ProfileBooks profileBooks;
 
     @BeforeMethod
@@ -24,6 +23,7 @@ public class BaseTest {
         this.books = new Books(driver);
         this.profileBooks = new ProfileBooks(driver);
     }
+
     @Test
     public void goToWebsite(){
 

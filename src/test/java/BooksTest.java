@@ -9,6 +9,7 @@ public class BooksTest extends BaseTest{
         Utils.waitInSeconds(1);
         books.printAllBooks();
     }
+
     @Test
     public void printAuthorAndPublisherByBookNamePositiveTest(){
         this.homePage.clickBookStoreApplicationCard();

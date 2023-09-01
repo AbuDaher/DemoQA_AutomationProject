@@ -1,9 +1,8 @@
-//BookInformationListTest
-
 import org.testng.annotations.Test;
 import utils.Utils;
 
 public class BookInformationListTest extends BaseTest{
+
     @Test
     public void getAllBookInformation(){
         this.homePage.clickBookStoreApplicationCard();

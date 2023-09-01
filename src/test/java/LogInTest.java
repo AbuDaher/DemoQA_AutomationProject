@@ -5,6 +5,7 @@ import org.testng.annotations.Test;
 import utils.Utils;
 
 public class LogInTest extends BaseTest {
+
     @Test
     public void logInTest()  {
         this.homePage.clickBookStoreApplicationCard();
