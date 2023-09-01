@@ -9,4 +9,3 @@ public class BookTitleListTest extends BaseTest{
         books.getAllBooksTitles();
     }
 }
-
