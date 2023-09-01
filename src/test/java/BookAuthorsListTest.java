@@ -9,5 +9,3 @@ public class BookAuthorsListTest extends BaseTest{
         Utils.waitInSeconds(1);
         books.getAllBooksAuthors();
     }
-
-}
